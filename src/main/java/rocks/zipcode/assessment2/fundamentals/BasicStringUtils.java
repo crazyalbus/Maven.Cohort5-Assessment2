@@ -43,8 +43,15 @@ public class BasicStringUtils {
      */
     public static String removeCharacters(String string, String charactersToRemove) {
 
+        String[] toRemove = charactersToRemove.split("");
+        String newString = string;
 
-        return string.replace(charactersToRemove, "");
+        for (String letter: toRemove
+             ) {
+            newString = newString.replace(letter, "");
+        }
+
+        return newString;
 
     }
 
