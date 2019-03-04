@@ -2,6 +2,7 @@ package rocks.zipcode.assessment2.generics;
 
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -11,7 +12,7 @@ import java.util.List;
  * Shelter<Person> farmHouse = new Shelter<Person>();
  * Shelter<Dog> dogHouse = new Shelter<Dog>();
  */
-public class Shelter<T>  {
+public class Shelter<T> implements Iterable {
 
     private T t;
     private List<T> occupants;
@@ -58,6 +59,7 @@ public class Shelter<T>  {
         return index;
     }
 
-
-
+    public Iterator iterator() {
+        return null;
+    }
 }
